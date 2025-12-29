@@ -95,6 +95,11 @@ pretty_print("Extracting F1 Jobs")
 # Iterating through all the teams and extracting the job information from their respective website using their scrapper
 for team, link in f1_teams_job_portal.items():
 
+    # Ignoring the Kick-Sauber team as their website has been taken down
+    # This team will convert into Audi in 2026
+    if team == "Kick Sauber":
+        continue
+
     # Printing the current team name to let the user know
     print("\nF1 Team:", team)
 
